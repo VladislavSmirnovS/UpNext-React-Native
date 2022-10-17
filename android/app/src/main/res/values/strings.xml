@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UpNext</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">40B_YvK6D31LxcpyP0tbgGVXbJKXr7h2Oy60C</string>
+    <string name="facebook_app_id">1159612967769876</string>
+</resources>

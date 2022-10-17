@@ -1,0 +1,39 @@
+diff --git a/node_modules/react-navigation-tabs/lib/commonjs/views/ResourceSavingScene.js b/node_modules/react-navigation-tabs/lib/commonjs/views/ResourceSavingScene.js
+index f4c1ec7..eafe1dd 100644
+--- a/node_modules/react-navigation-tabs/lib/commonjs/views/ResourceSavingScene.js
++++ b/node_modules/react-navigation-tabs/lib/commonjs/views/ResourceSavingScene.js
+@@ -60,7 +60,7 @@ class ResourceSavingScene extends React.Component {
+       collapsable: false,
+       removeClippedSubviews: // On iOS, set removeClippedSubviews to true only when not focused
+       // This is an workaround for a bug where the clipped view never re-appears
+-      _reactNative.Platform.OS === 'ios' ? !isVisible : true,
++      _reactNative.Platform.OS === 'ios' ? !isVisible : false,
+       pointerEvents: isVisible ? 'auto' : 'none'
+     }, rest), /*#__PURE__*/React.createElement(_reactNative.View, {
+       style: isVisible ? styles.attached : styles.detached
+diff --git a/node_modules/react-navigation-tabs/lib/module/views/ResourceSavingScene.js b/node_modules/react-navigation-tabs/lib/module/views/ResourceSavingScene.js
+index e520dc2..d8b4ada 100644
+--- a/node_modules/react-navigation-tabs/lib/module/views/ResourceSavingScene.js
++++ b/node_modules/react-navigation-tabs/lib/module/views/ResourceSavingScene.js
+@@ -47,7 +47,7 @@ export default class ResourceSavingScene extends React.Component {
+       collapsable: false,
+       removeClippedSubviews: // On iOS, set removeClippedSubviews to true only when not focused
+       // This is an workaround for a bug where the clipped view never re-appears
+-      Platform.OS === 'ios' ? !isVisible : true,
++      Platform.OS === 'ios' ? !isVisible : false,
+       pointerEvents: isVisible ? 'auto' : 'none'
+     }, rest), /*#__PURE__*/React.createElement(View, {
+       style: isVisible ? styles.attached : styles.detached
+diff --git a/node_modules/react-navigation-tabs/src/views/ResourceSavingScene.tsx b/node_modules/react-navigation-tabs/src/views/ResourceSavingScene.tsx
+index 37c5a31..d8d463d 100644
+--- a/node_modules/react-navigation-tabs/src/views/ResourceSavingScene.tsx
++++ b/node_modules/react-navigation-tabs/src/views/ResourceSavingScene.tsx
+@@ -50,7 +50,7 @@ export default class ResourceSavingScene extends React.Component<Props> {
+         removeClippedSubviews={
+           // On iOS, set removeClippedSubviews to true only when not focused
+           // This is an workaround for a bug where the clipped view never re-appears
+-          Platform.OS === 'ios' ? !isVisible : true
++          Platform.OS === 'ios' ? !isVisible : false
+         }
+         pointerEvents={isVisible ? 'auto' : 'none'}
+         {...rest}
